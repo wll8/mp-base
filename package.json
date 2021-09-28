@@ -1,0 +1,73 @@
+{
+  "name": "recruit-students",
+  "version": "1.0.0",
+  "description": "- [scss](https://www.sass.hk/guide/)\r - [uview-ui](https://uviewui.com/components/intro.html)",
+  "main": "main.js",
+  "scripts": {
+    "lint": "vue-cli-service lint . --ignore-path .gitignore",
+    "mockm": "./node_modules/.bin/mockm",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/wll8/recruit-students"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "eslintConfig": {
+    "globals": {
+      "uni": true,
+      "wx": true
+    },
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended",
+      "@vue/prettier"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "ignorePatterns": [
+      "uni_modules",
+      "components/uni-*",
+      "uview-ui"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "semi": false
+        }
+      ],
+      "semi": [
+        "error",
+        "never"
+      ],
+      "quotes": [
+        "error",
+        "backtick"
+      ],
+      "no-unused-vars": "off",
+      "no-console": "off",
+      "no-debugger": "off"
+    }
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "@vue/cli-service": "^4.5.12",
+    "@vue/cli-plugin-babel": "^4.5.12",
+    "@vue/cli-plugin-eslint": "^4.5.12",
+    "mockm": "1.1.25-alpha.10"
+  }
+}

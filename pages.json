@@ -1,0 +1,42 @@
+{
+  "easycom": {
+    "^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+  },
+  "pages": [
+    {
+      "path": "pages/example/page1",
+      "style": {
+        "navigationBarTitleText": "页面1"
+      }
+    },
+    {
+      "path": "pages/example/page2",
+      "style": {
+        "navigationBarTitleText": "页面2"
+      }
+    }
+  ],
+  "subPackages": [],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "navigationBarTitleText",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#909399",
+    "selectedColor": "#303133",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/example/page1",
+        "text": "页面1"
+      },
+      {
+        "pagePath": "pages/example/page2",
+        "text": "页面2"
+      }
+    ]
+  }
+}
