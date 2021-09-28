@@ -16,7 +16,7 @@ function mobile(value) {
  * 验证URL格式
  */
 function url(value) {
-	return /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w-.\/?%&=]*)?/.test(value)
+	return /^http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w-.\/?%&=]*)?/.test(value)
 }
 
 /**
