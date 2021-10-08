@@ -15,4 +15,5 @@ export default {
 <style lang="scss">
 /* 注意声明lang="scss"！ */
 @import 'uview-ui/index.scss';
+@import '~@/common/style.scss';
 </style>

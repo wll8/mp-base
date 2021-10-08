@@ -1,6 +1,7 @@
 <template>
-  <div class="pageBox">
-    <u-button @click="fn">u-button</u-button>
+  <div class="pageBox pagePadding">
+    <u-button class="btn" @click="fn">u-button</u-button>
+    <p>这是一些文本这是一些文本这是一些文本这是一些文本这是一些文本</p>
   </div>
 </template>
 
@@ -22,5 +23,9 @@ export default {
 
 <style lang="scss" scoped>
 .pageBox {
+  color: $uni-text-color;
+  p {
+    @include line(1);
+  }
 }
 </style>

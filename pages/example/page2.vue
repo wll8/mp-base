@@ -1,5 +1,5 @@
 <template>
-  <div class="pageBox">
+  <div class="pageBox pagePadding">
     <u-button @click="getBlogList">获取博文列表</u-button>
     <u-button @click="getBlogDetails">获取博文详情</u-button>
     <u-button @click="createBlog">创建博文</u-button>
