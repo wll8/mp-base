@@ -17,7 +17,7 @@ const install = (Vue, vm) => {
     if (String(res.statusCode).match(/^2/)) {
       return res.data
     } else {
-      uni.$u.toast(res.message)
+      res.config.showLoading && uni.$u.toast(res.message || `网络数据错误`)
       throw res.message
     }
   }

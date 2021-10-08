@@ -32,6 +32,7 @@ class Request {
 
 		return new Promise((resolve, reject) => {
 			options.complete = (response) => {
+				response.config = userConfig
 				// 请求返回后，隐藏loading(如果请求返回快的话，可能会没有loading)
 				uni.hideLoading();
 				// 清除定时器，如果请求回来了，就无需loading
@@ -144,33 +145,33 @@ class Request {
 		}
 
 		// post请求
-		this.post = (url, data = {}, header = {}) => {
+		this.post = (url, data = {}, header = {}, config = {}) => {
 			return this.request({
 				url,
 				method: 'POST',
 				header,
 				data
-			})
+			}, config)
 		}
 
 		// put请求，不支持支付宝小程序(HX2.6.15)
-		this.put = (url, data = {}, header = {}) => {
+		this.put = (url, data = {}, header = {}, config = {}) => {
 			return this.request({
 				url,
 				method: 'PUT',
 				header,
 				data
-			})
+			}, config)
 		}
 
 		// delete请求，不支持支付宝和头条小程序(HX2.6.15)
-		this.delete = (url, data = {}, header = {}) => {
+		this.delete = (url, data = {}, header = {}, config = {}) => {
 			return this.request({
 				url,
 				method: 'DELETE',
 				header,
 				data
-			})
+			}, config)
 		}
 	}
 }
