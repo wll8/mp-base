@@ -38,6 +38,8 @@
       "uview-ui"
     ],
     "rules": {
+      "no-var": "error",
+      "spaced-comment": "error",
       "prettier/prettier": [
         "error",
         {
