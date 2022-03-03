@@ -36,6 +36,7 @@
   ],
   "subPackages": [],
   "globalStyle": {
+    "navigationStyle": "custom",
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "navigationBarTitleText",
     "navigationBarBackgroundColor": "#F8F8F8",

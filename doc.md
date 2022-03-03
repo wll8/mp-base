@@ -12,7 +12,10 @@
 - vr 全景 + 虚拟旅游
   - webview 可用
 - 图片浏览
-  - https://fengyuanchen.github.io/viewerjs/
+  - https://fengyuanchen.github.io/viewerjs/ - 有 bug
+  - https://photoswipe.com/
+  - https://sachinchoolur.github.io/lightgallery.js/
+  - https://www.lightgalleryjs.com/
 - 访问统计
 - 分享之后知道谁打开的这个链接
   - 参考客户雷达
@@ -35,6 +38,14 @@
 
 ## 思考
 - 哪些东西使用小程序完成, 哪些东西使用 webview 完成
+  - 答: 小程序只有两个页面, 父页面和子页面, 子页面用来放 webview.
+## todo
+  - [ ] feat(view360): 实现类 vue-360 的工具栏
+  - [ ] fix(view360): 进入页面后点击中心的 view360 图片控制台会报错
+  - [ ] fix(view360): 中间的图片是在网线上, 可能会加载错误
+  - [ ] fix(vr): 横屏时按钮栏图标位置不正确
+  - [ ] fix(vr): 横屏时刷新会看到很多按钮, 但点击屏幕时突然变少了
+  - [ ] feat: 实现页面强制横屏或者自动旋转, 要注意屏幕改变化的样式问题
 
 ## 参考
   - 在线图片生成 vr https://renderstuff.com/tools/360-panorama-web-viewer/

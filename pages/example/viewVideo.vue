@@ -38,7 +38,7 @@ export default {
 .pageBox {
   #dplayer {
     width: 100vw;
-    height: calc(100vh - 44px);
+    height: calc(100vh - 0px);
   }
 }
 </style>
