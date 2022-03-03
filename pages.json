@@ -26,6 +26,12 @@
       "style": {
         "navigationBarTitleText": "viewImg"
       }
+    },
+    {
+      "path": "pages/example/viewVideo",
+      "style": {
+        "navigationBarTitleText": "viewVideo"
+      }
     }
   ],
   "subPackages": [],

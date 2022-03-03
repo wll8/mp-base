@@ -9,6 +9,9 @@
     <u-button class="btn" @click="$router.push(`/pages/example/viewImg`)"
       >viewImg</u-button
     >
+    <u-button class="btn" @click="$router.push(`/pages/example/viewVideo`)"
+      >viewVideo</u-button
+    >
   </div>
 </template>
 
