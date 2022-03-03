@@ -23,7 +23,7 @@ export default {
       const PhotoSphereViewer = window.PhotoSphereViewer
       let viewer = new PhotoSphereViewer.Viewer({
         container: `photosphere`,
-        loadingImg: `http://127.0.0.1:9100/static/photo-sphere-viewer.js.org/assets/photosphere-logo.gif`,
+        loadingImg: `${this.vuex_staticUrl}/photo-sphere-viewer.js.org/assets/photosphere-logo.gif`,
         // caption: "Cape Florida Light, Key Biscayne <b>&copy; Pixexid</b>",
         defaultLong: `100deg`,
         plugins: [
@@ -50,14 +50,14 @@ export default {
         [
           {
             id: `1`,
-            panorama: `http://127.0.0.1:9100/static/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-1.jpg`,
-            thumbnail: `http://127.0.0.1:9100/static/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-1-thumb.jpg`,
+            panorama: `${this.vuex_staticUrl}/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-1.jpg`,
+            thumbnail: `${this.vuex_staticUrl}/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-1-thumb.jpg`,
             name: `One`,
             links: [{ nodeId: `2` }],
             markers: [
               {
                 id: `marker-1`,
-                image: `http://127.0.0.1:9100/static/photo-sphere-viewer.js.org/assets/pin-red.png`,
+                image: `${this.vuex_staticUrl}/photo-sphere-viewer.js.org/assets/pin-red.png`,
                 tooltip: `Cape Florida Light, Key Biscayne`,
                 width: 32,
                 height: 32,
@@ -71,8 +71,8 @@ export default {
           },
           {
             id: `2`,
-            panorama: `http://127.0.0.1:9100/static/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-2.jpg`,
-            thumbnail: `http://127.0.0.1:9100/static/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-2-thumb.jpg`,
+            panorama: `${this.vuex_staticUrl}/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-2.jpg`,
+            thumbnail: `${this.vuex_staticUrl}/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-2-thumb.jpg`,
             name: `Two`,
             links: [{ nodeId: `3` }, { nodeId: `1` }],
             position: [-80.156168, 25.666623, 3],
@@ -80,8 +80,8 @@ export default {
           },
           {
             id: `3`,
-            panorama: `http://127.0.0.1:9100/static/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-3.jpg`,
-            thumbnail: `http://127.0.0.1:9100/static/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-3-thumb.jpg`,
+            panorama: `${this.vuex_staticUrl}/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-3.jpg`,
+            thumbnail: `${this.vuex_staticUrl}/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-3-thumb.jpg`,
             name: `Three`,
             links: [{ nodeId: `4` }, { nodeId: `2` }, { nodeId: `5` }],
             position: [-80.155932, 25.666498, 5],
@@ -89,8 +89,8 @@ export default {
           },
           {
             id: `4`,
-            panorama: `http://127.0.0.1:9100/static/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-4.jpg`,
-            thumbnail: `http://127.0.0.1:9100/static/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-4-thumb.jpg`,
+            panorama: `${this.vuex_staticUrl}/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-4.jpg`,
+            thumbnail: `${this.vuex_staticUrl}/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-4-thumb.jpg`,
             name: `Four`,
             links: [{ nodeId: `3` }, { nodeId: `5` }],
             position: [-80.156089, 25.666357, 3],
@@ -98,8 +98,8 @@ export default {
           },
           {
             id: `5`,
-            panorama: `http://127.0.0.1:9100/static/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-5.jpg`,
-            thumbnail: `http://127.0.0.1:9100/static/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-5-thumb.jpg`,
+            panorama: `${this.vuex_staticUrl}/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-5.jpg`,
+            thumbnail: `${this.vuex_staticUrl}/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-5-thumb.jpg`,
             name: `Five`,
             links: [{ nodeId: `6` }, { nodeId: `3` }, { nodeId: `4` }],
             position: [-80.156292, 25.666446, 2],
@@ -107,8 +107,8 @@ export default {
           },
           {
             id: `6`,
-            panorama: `http://127.0.0.1:9100/static/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-6.jpg`,
-            thumbnail: `http://127.0.0.1:9100/static/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-6-thumb.jpg`,
+            panorama: `${this.vuex_staticUrl}/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-6.jpg`,
+            thumbnail: `${this.vuex_staticUrl}/photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-6-thumb.jpg`,
             name: `Six`,
             links: [{ nodeId: `5` }],
             position: [-80.156465, 25.666496, 2],

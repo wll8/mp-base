@@ -26,7 +26,7 @@ export default {
       const dp = new DPlayer({
         container: document.getElementById(`dplayer`),
         video: {
-          url: `http://127.0.0.1:9100/static/video/movie.mp4`,
+          url: `${this.vuex_staticUrl}/video/movie.mp4`,
         },
       })
     },

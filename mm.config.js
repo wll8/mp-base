@@ -21,6 +21,10 @@ module.exports = (util) => {
         path: `/static/`,
         fileDir: `./static/`,
       },
+      {
+        path: `/h5/`,
+        fileDir: `./unpackage/dist/build/h5/`,
+      },
     ],
     db: {
       blogs: [

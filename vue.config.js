@@ -1,4 +1,5 @@
 const config = require(`./common/config.js`) || {}
+process.env.VUE_APP_STATIC_URL = config.staticUrl
 
 module.exports = {
   css: {

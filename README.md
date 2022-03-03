@@ -11,7 +11,7 @@
 - 使用 hbuilderx 启动本项目
 - 运行命令 `cnpm i` 安装相关工具
 - 运行命令 `npm run mockm` 启动接口调试工具
-- 原型 http://127.0.0.1:9000/static/rp/
+- 原型 http://127.0.0.1:9100/static/rp/
 
 注: 使用 vscode/eslint/EditorConfig 可自动进行代码风格统一.
 

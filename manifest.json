@@ -49,7 +49,7 @@
     },
     "h5" : {
         "router" : {
-            "base" : "/"
+            "base" : "/h5"
         },
         "title" : "页面标题",
         "template" : "index.html"

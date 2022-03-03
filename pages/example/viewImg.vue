@@ -3,20 +3,10 @@
     <div>
       <div id="images">
         <img
-          src="http://127.0.0.1:9100/static/fengyuanchen.github.io/viewerjs/images/tibet-1.jpg"
-          alt="Picture 1"
-        />
-        <img
-          src="http://127.0.0.1:9100/static/fengyuanchen.github.io/viewerjs/images/tibet-2.jpg"
-          alt="Picture 2"
-        />
-        <img
-          src="http://127.0.0.1:9100/static/fengyuanchen.github.io/viewerjs/images/tibet-3.jpg"
-          alt="Picture 3"
-        />
-        <img
-          src="http://127.0.0.1:9100/static/fengyuanchen.github.io/viewerjs/images/tibet-4.jpg"
-          alt="Picture 4"
+          v-for="item in 4"
+          :key="item"
+          :src="`${vuex_staticUrl}/fengyuanchen.github.io/viewerjs/images/tibet-${item}.jpg`"
+          :alt="`Picture ${item}`"
         />
       </div>
     </div>

@@ -1,11 +1,11 @@
 const config = {
   development: {
-    baseUrl: `http://127.0.0.1:9000`,
-    staticUrl: `http://127.0.0.1:9000/static`,
+    baseUrl: `http://127.0.0.1:9100`,
+    staticUrl: `http://127.0.0.1:9100/h5/static`,
   },
   production: {
-    baseUrl: ``,
-    staticUrl: ``,
+    baseUrl: `/`,
+    staticUrl: `/h5/static`,
   },
 }[process.env.NODE_ENV]
 
