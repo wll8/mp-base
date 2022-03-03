@@ -10,9 +10,15 @@
       }
     },
     {
-      "path": "pages/example/page2",
+      "path": "pages/example/vr",
       "style": {
-        "navigationBarTitleText": "页面2"
+        "navigationBarTitleText": "vr"
+      }
+    },
+    {
+      "path": "pages/example/view360",
+      "style": {
+        "navigationBarTitleText": "view360"
       }
     }
   ],

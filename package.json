@@ -34,6 +34,7 @@
     },
     "ignorePatterns": [
       "uni_modules",
+      "view-360",
       "components/uni-*",
       "static",
       "uview-ui"

@@ -37,6 +37,7 @@
 - 哪些东西使用小程序完成, 哪些东西使用 webview 完成
 
 ## 参考
+  - 在线图片生成 vr https://renderstuff.com/tools/360-panorama-web-viewer/
   - Javascript 360 全景查看器 https://github.com/pchen66/panolens.js
   - 环绕物体的制作 https://www.pano2vr8.com/%E4%BB%80%E4%B9%88%E6%98%AF%E7%8E%AF%E7%89%A9/
   - PANO2VR基础教程 https://www.pano2vr8.com/pano2vr%e5%9f%ba%e7%a1%80%e6%95%99%e7%a8%8b/

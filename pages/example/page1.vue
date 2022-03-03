@@ -1,7 +1,11 @@
 <template>
   <div class="pageBox pagePadding">
-    <u-button class="btn" @click="fn">全景</u-button>
-    <p>这是一些文本这是一些文本这是一些文本这是一些文本这是一些文本</p>
+    <u-button class="btn" @click="$router.push(`/pages/example/vr`)"
+      >全景</u-button
+    >
+    <u-button class="btn" @click="$router.push(`/pages/example/view360`)"
+      >360</u-button
+    >
   </div>
 </template>
 
@@ -13,11 +17,7 @@ export default {
       list: [],
     }
   },
-  methods: {
-    async fn() {
-      this.$router.push(`/pages/example/page2`)
-    },
-  },
+  methods: {},
 }
 </script>
 
