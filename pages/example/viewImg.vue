@@ -15,6 +15,7 @@
 
 <script>
 // todo fix 当放大图片后, 图片被滑离视图区域时应切换到下一张
+// todo fix 手机端滑动切换时图片时, 间断性不能正常切换
 
 export default {
   components: {},
