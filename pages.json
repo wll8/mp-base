@@ -28,15 +28,6 @@
     "selectedColor": "#303133",
     "backgroundColor": "#FFFFFF",
     "borderStyle": "black",
-    "list": [
-      {
-        "pagePath": "pages/example/page1",
-        "text": "页面1"
-      },
-      {
-        "pagePath": "pages/example/page2",
-        "text": "页面2"
-      }
-    ]
+    "list": []
   }
 }

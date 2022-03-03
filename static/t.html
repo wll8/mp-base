@@ -1,0 +1,162 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/uevent@2/browser.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.css">
+<script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/plugins/markers.css">
+<script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/plugins/markers.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/plugins/virtual-tour.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/plugins/virtual-tour.css">
+
+<div id="photosphere"></div>
+<style>
+  html,
+  body,
+  #photosphere {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+<script type="text/template" id="lorem-content">
+  <h1>HTML Ipsum Presents</h1>
+
+  <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas.
+    Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+    egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et
+    sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet,
+    wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac
+    dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+    
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54469.108394396746!2d6.9617553450295855!3d44.151844842645815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdaf6678af879d%3A0xcabc15aee7b89386!2sParc%20national%20du%20Mercantour!5e0!3m2!1sfr!2sfr!4v1611498421096!5m2!1sfr!2sfr" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+  <h2>Header Level 2</h2>
+
+  <ol>
+    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+    <li>Aliquam tincidunt mauris eu risus.</li>
+  </ol>
+
+  <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet
+    congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis,
+    tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+
+  <h3>Header Level 3</h3>
+
+  <ul>
+    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+    <li>Aliquam tincidunt mauris eu risus.</li>
+  </ul>
+</script>
+<script>
+  var viewer = new PhotoSphereViewer.Viewer({
+    container: 'photosphere',
+    loadingImg: 'https://photo-sphere-viewer.js.org/assets/photosphere-logo.gif',
+    touchmoveTwoFingers: true,
+    mousewheelCtrlKey: true,
+    caption: 'Cape Florida Light, Key Biscayne <b>&copy; Pixexid</b>',
+    defaultLong: '100deg',
+    plugins: [
+      [PhotoSphereViewer.MarkersPlugin, {
+        hideButton: false,
+        listButton: false,
+      }],
+      [PhotoSphereViewer.VirtualTourPlugin, {
+        positionMode: PhotoSphereViewer.VirtualTourPlugin.MODE_GPS,
+        renderMode: PhotoSphereViewer.VirtualTourPlugin.MODE_3D,
+      }],
+    ],
+  });
+
+  var virtualTour = viewer.getPlugin(PhotoSphereViewer.VirtualTourPlugin);
+
+  virtualTour.setNodes([
+    {
+      id: '1',
+      panorama: 'https://photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-1.jpg',
+      thumbnail: 'https://photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-1-thumb.jpg',
+      name: 'One',
+      links: [
+        { nodeId: '2' },
+      ],
+      markers: [
+        {
+          id: 'marker-1',
+          image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+          tooltip: 'Cape Florida Light, Key Biscayne',
+          width: 32,
+          height: 32,
+          anchor: 'bottom center',
+          longitude: '105deg',
+          latitude: '35deg',
+        }
+      ],
+      position: [-80.156479, 25.666725, 3],
+      panoData: { poseHeading: 327 },
+    },
+    {
+      id: '2',
+      panorama: 'https://photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-2.jpg',
+      thumbnail: 'https://photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-2-thumb.jpg',
+      name: 'Two',
+      links: [
+        { nodeId: '3' },
+        { nodeId: '1' },
+      ],
+      position: [-80.156168, 25.666623, 3],
+      panoData: { poseHeading: 318 },
+    },
+    {
+      id: '3',
+      panorama: 'https://photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-3.jpg',
+      thumbnail: 'https://photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-3-thumb.jpg',
+      name: 'Three',
+      links: [
+        { nodeId: '4' },
+        { nodeId: '2' },
+        { nodeId: '5' },
+      ],
+      position: [-80.155932, 25.666498, 5],
+      panoData: { poseHeading: 328 },
+    },
+    {
+      id: '4',
+      panorama: 'https://photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-4.jpg',
+      thumbnail: 'https://photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-4-thumb.jpg',
+      name: 'Four',
+      links: [
+        { nodeId: '3' },
+        { nodeId: '5' },
+      ],
+      position: [-80.156089, 25.666357, 3],
+      panoData: { poseHeading: 78 },
+    },
+    {
+      id: '5',
+      panorama: 'https://photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-5.jpg',
+      thumbnail: 'https://photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-5-thumb.jpg',
+      name: 'Five',
+      links: [
+        { nodeId: '6' },
+        { nodeId: '3' },
+        { nodeId: '4' },
+      ],
+      position: [-80.156292, 25.666446, 2],
+      panoData: { poseHeading: 190 },
+    },
+    {
+      id: '6',
+      panorama: 'https://photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-6.jpg',
+      thumbnail: 'https://photo-sphere-viewer-data.netlify.app/assets/tour/key-biscayne-6-thumb.jpg',
+      name: 'Six',
+      links: [
+        { nodeId: '5' },
+      ],
+      position: [-80.156465, 25.666496, 2],
+      panoData: { poseHeading: 328 },
+    },
+  ], '1');
+</script>

@@ -1,6 +1,6 @@
 <template>
   <div class="pageBox pagePadding">
-    <u-button class="btn" @click="fn">u-button</u-button>
+    <u-button class="btn" @click="fn">全景</u-button>
     <p>这是一些文本这是一些文本这是一些文本这是一些文本这是一些文本</p>
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     async fn() {
-      this.$u.toast(`什么也不干的按钮`)
+      this.$router.push(`/pages/example/page2`)
     },
   },
 }

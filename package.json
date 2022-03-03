@@ -35,6 +35,7 @@
     "ignorePatterns": [
       "uni_modules",
       "components/uni-*",
+      "static",
       "uview-ui"
     ],
     "rules": {

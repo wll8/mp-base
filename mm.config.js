@@ -7,9 +7,9 @@ module.exports = (util) => {
   } = util
   return {
     guard: true,
-    port: 9000,
-    testPort: 9005,
-    replayPort: 9001,
+    port: 9100,
+    testPort: 9105,
+    replayPort: 9101,
     watch: [],
     proxy: {
       '/': `http://www.httpbin.org/`, // 要代理的后端接口地址
