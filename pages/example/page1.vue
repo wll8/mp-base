@@ -1,10 +1,13 @@
 <template>
   <div class="pageBox pagePadding">
     <u-button class="btn" @click="$router.push(`/pages/example/vr`)"
-      >全景</u-button
+      >vr</u-button
     >
     <u-button class="btn" @click="$router.push(`/pages/example/view360`)"
-      >360</u-button
+      >view360</u-button
+    >
+    <u-button class="btn" @click="$router.push(`/pages/example/viewImg`)"
+      >viewImg</u-button
     >
   </div>
 </template>

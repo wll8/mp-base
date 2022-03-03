@@ -20,6 +20,12 @@
       "style": {
         "navigationBarTitleText": "view360"
       }
+    },
+    {
+      "path": "pages/example/viewImg",
+      "style": {
+        "navigationBarTitleText": "viewImg"
+      }
     }
   ],
   "subPackages": [],
