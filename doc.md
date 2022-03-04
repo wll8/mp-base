@@ -37,10 +37,13 @@
 - 排序方式 -- 按分组依据中的内容以递增或递减方式排序, 可以使用级联选择
 
 ## 思考
+- 手机如何拍立面图
 - 哪些东西使用小程序完成, 哪些东西使用 webview 完成
   - 答: 小程序只有两个页面, 父页面和子页面, 子页面用来放 webview.
 ## todo
   - [ ] feat(view360): 实现类 vue-360 的工具栏
+  - [ ] feat: vr 中添加声音
+    - https://github.com/GoogleChrome/omnitone/issues/58
   - [ ] fix(view360): 进入页面后点击中心的 view360 图片控制台会报错
   - [ ] fix(view360): 中间的图片是在网线上, 可能会加载错误
   - [ ] fix(vr): 横屏时按钮栏图标位置不正确
@@ -48,6 +51,11 @@
   - [ ] feat: 实现页面强制横屏或者自动旋转, 要注意屏幕改变化的样式问题
 
 ## 参考
+  - 720yun 在线办公室场景 https://720yun.com/vr/84027wOfqyw
+  - VR全景图片“补天补地”教程 https://zhuanlan.zhihu.com/p/45562802
+  - 三种前端实现VR全景看房的方案 https://blog.csdn.net/sshuai131400/article/details/120594076
+  - krpano360 教程 http://www.krpano360.com/choosekrpano/
+  - 六面图制作全景图 http://www.360doc.com/content/17/0404/13/11604731_642767414.shtml -- 亲测可用
   - 在线图片生成 vr https://renderstuff.com/tools/360-panorama-web-viewer/
   - Javascript 360 全景查看器 https://github.com/pchen66/panolens.js
   - 环绕物体的制作 https://www.pano2vr8.com/%E4%BB%80%E4%B9%88%E6%98%AF%E7%8E%AF%E7%89%A9/
