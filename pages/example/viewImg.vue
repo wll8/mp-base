@@ -1,22 +1,20 @@
 <template>
   <div class="pageBox">
-    <div>
-      <div id="images">
+    <div id="lightgallery" v-show="true">
+      <a
+        v-for="item in 4"
+        :key="item"
+        :href="`${vuex_staticUrl}/fengyuanchen.github.io/viewerjs/images/tibet-${item}.jpg`"
+      >
         <img
-          v-for="item in 4"
-          :key="item"
           :src="`${vuex_staticUrl}/fengyuanchen.github.io/viewerjs/images/tibet-${item}.jpg`"
-          :alt="`Picture ${item}`"
         />
-      </div>
+      </a>
     </div>
   </div>
 </template>
 
 <script>
-// todo fix 当放大图片后, 图片被滑离视图区域时应切换到下一张
-// todo fix 手机端滑动切换时图片时, 间断性不能正常切换
-
 export default {
   components: {},
   created() {},
@@ -32,33 +30,14 @@ export default {
   },
   methods: {
     async init() {
-      const Viewer = window.Viewer
-      const viewer = new Viewer(document.getElementById(`images`), {
-        inline: true,
-        navbar: true,
-        loading: false,
-        movable: true, // 移动
-        scalable: true, // 镜像
-        zoomable: true, // 缩放
-        zoomOnTouch: true, // 缩放
-        zoomOnWheel: true, // 缩放
-        slideOnTouch: true, // 滑动切换一下个
-        toggleOnDblclick: false, // 转换单双击放大
-        toolbar: {
-          zoomIn: true,
-          zoomOut: true,
-          oneToOne: true,
-          reset: true,
-          // prev: true,
-          // play: true,
-          // next: true,
-          rotateLeft: true,
-          rotateRight: true,
-          flipHorizontal: true,
-          flipVertical: true,
-        },
-        viewed() {
-          // viewer.zoomTo(1)
+      const lightGallery = window.lightGallery
+      const lgZoom = window.lgZoom
+      const lgThumbnail = window.lgThumbnail
+      const el = document.getElementById(`lightgallery`)
+      const plugin = lightGallery(el, {
+        plugins: [lgZoom, lgThumbnail],
+        mobileSettings: {
+          download: false,
         },
       })
     },
@@ -68,10 +47,13 @@ export default {
 
 <style lang="scss" scoped>
 .pageBox {
-  #images {
-    opacity: 0;
-    width: 100vw;
-    height: calc(100vh - 0px);
+  #lightgallery {
+    // opacity: 0;
+    // width: 100vw;
+    // height: calc(100vh - 0px);
+    img {
+      width: 100px;
+    }
   }
 }
 </style>
