@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "lint": "vue-cli-service lint . --ignore-path .gitignore",
-    "mockm": "./node_modules/.bin/mockm",
+    "mockm": "npx mockm",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -70,6 +70,6 @@
     "@vue/cli-service": "^4.5.12",
     "@vue/cli-plugin-babel": "^4.5.12",
     "@vue/cli-plugin-eslint": "^4.5.12",
-    "mockm": "1.1.25-alpha.10"
+    "mockm": "1.1.27-alpha.9"
   }
 }

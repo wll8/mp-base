@@ -1,7 +1,7 @@
 const config = {
   development: {
-    baseUrl: `http://127.0.0.1:9000`,
-    staticUrl: `http://127.0.0.1:9000/static`,
+    baseUrl: `http://127.0.0.1:9400`,
+    staticUrl: `http://127.0.0.1:9400/static`,
   },
   production: {
     baseUrl: ``,

@@ -9,8 +9,8 @@
 
 ## 启动
 - 使用 hbuilderx 启动本项目
-- 运行命令 `cnpm i` 安装相关工具
-- 运行命令 `npm run mockm` 启动接口调试工具
+- 运行命令 `pnpm i` 安装相关工具
+- 运行命令 `pnpm run mockm` 启动接口调试工具
 
 注: 使用 vscode/eslint/EditorConfig 可自动进行代码风格统一.
 
@@ -30,8 +30,8 @@
 
 ## 技术栈
 - [uniapp](https://uniapp.dcloud.io/)
-- [uview-ui](https://www.uviewui.com/)
-- [vue](https://cn.vuejs.org/v2/guide/)
+- [uview-ui 1.x](https://v1.uviewui.com/)
+- [vue 2.x](https://cn.vuejs.org/v2/guide/)
 - [vuex](https://vuex.vuejs.org/zh/guide/)
 - [scss](https://www.sass.hk/guide/)
 - [mockm](https://hongqiye.com/doc/mockm/)
