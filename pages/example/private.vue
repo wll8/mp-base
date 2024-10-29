@@ -1,7 +1,7 @@
 <template>
   <div class="pageBox pagePadding">
-    <u-button class="btn" @click="fn">u-button</u-button>
-    <p>这是一些文本这是一些文本这是一些文本这是一些文本这是一些文本</p>
+    <u-button class="btn" @click="fn">退出登录</u-button>
+    <p>你已登录到个人空间</p>
   </div>
 </template>
 

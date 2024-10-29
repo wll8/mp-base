@@ -6,11 +6,13 @@
 - 接口调试工具
 - UI库
 - 通用工具函数
+- 路由拦截
+- 微信登录
 
 ## 启动
-- 使用 hbuilderx 启动本项目
 - 运行命令 `pnpm i` 安装相关工具
 - 运行命令 `pnpm run mockm` 启动接口调试工具
+- 使用 hbuilderx 启动本项目并运行到浏览器
 
 注: 使用 vscode/eslint/EditorConfig 可自动进行代码风格统一.
 
@@ -31,7 +33,7 @@
 ## 技术栈
 - [uniapp](https://uniapp.dcloud.io/)
 - [uview-ui 1.x](https://v1.uviewui.com/)
-- [vue 2.x](https://cn.vuejs.org/v2/guide/)
+- [vue 2.x](https://v2.cn.vuejs.org/)
 - [vuex](https://vuex.vuejs.org/zh/guide/)
 - [scss](https://www.sass.hk/guide/)
 - [mockm](https://hongqiye.com/doc/mockm/)

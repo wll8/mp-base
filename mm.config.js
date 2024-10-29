@@ -16,13 +16,35 @@ module.exports = (util) => {
     },
     openApi: `http://www.httpbin.org/spec.json`,
     static: [
-      // 不同的路径访问不同的静态文件目录
       {
         path: `/static/`,
-        fileDir: `./static/`,
+        fileDir: `./static-http/`,
+        list: true,
       },
     ],
-    db: {
+    api() {
+      const staticUrl = `//${global.config.osIp}:${global.config.port}/static`
+      return {
+        // 微信登录
+        '/wxLogin'(req, res) {
+          return res.json({
+            token: `tokentokentoken`,
+          })
+        },
+        '/logout'(req, res) {
+          return res.json({})
+        },
+        // 获取用户信息
+        '/user'(req, res) {
+          return res.json({
+            name: `hello`,
+            id: Date.now(),
+          })
+        },
+      }
+    },
+    dbCover: true,
+    db: mockjs.mock({
       blogs: [
         {
           id: 1,
@@ -30,6 +52,6 @@ module.exports = (util) => {
           title: `认识 mockm 的第一天`,
         },
       ],
-    },
+    }),
   }
 }

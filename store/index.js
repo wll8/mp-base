@@ -14,7 +14,7 @@ try {
 }
 
 // 需要永久存储，且下次APP启动需要取出的，在state中的变量名
-let saveStateKeys = [`vuex_user`, `vuex_token`, `vuex_scene`]
+let saveStateKeys = [`vuex_user`, `vuex_token`]
 
 // 保存变量到本地存储中
 const saveLifeData = function (key, value) {
@@ -33,17 +33,10 @@ const store = new Vuex.Store({
   state: {
     vuex_user: lifeData.vuex_user ? lifeData.vuex_user : {},
     vuex_token: lifeData.vuex_token ? lifeData.vuex_token : ``,
-    vuex_scene: lifeData.vuex_scene ? lifeData.vuex_scene : ``,
     vuex_version: `0.0.1`,
-    vuex_getGlobalNotificationRes: {
-      // 全局通知
-      professionalConsultation: [], // 专业咨询
-      sessionList: [], // 会话列表
-    },
+    vuex_html: {},
     vuex_staticUrl: config.staticUrl,
     vuex_baseUrl: config.baseUrl,
-    vuex_tabbarIndex: 0, // 页面 tab 位置
-    vuex_tabbarName: `goodsList`, // 页面 tab 名称
   },
   mutations: {
     $uStore(state, payload) {

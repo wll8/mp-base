@@ -1,3 +1,14 @@
+const base = {
+  name: `demo`,
+  whitelistPage: [
+    `/pages/example/home`,
+    `/pages/example/api`,
+    `/pages/passport/wechatMPLogin`,
+    `/pages/html/index`,
+  ],
+  loginPage: `/pages/passport/wechatMPLogin`,
+  homePage: `/pages/example/home`,
+}
 const config = {
   development: {
     baseUrl: `http://127.0.0.1:9400`,
@@ -9,4 +20,7 @@ const config = {
   },
 }[process.env.NODE_ENV]
 
-module.exports = config
+module.exports = {
+  ...base,
+  ...config,
+}

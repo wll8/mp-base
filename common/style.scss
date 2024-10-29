@@ -10,6 +10,15 @@
   box-shadow: 0upx 5upx 30upx 0upx rgba(0, 0, 0, 0.05);
 }
 
+.gCard {
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.08); 
+}
+
+.gWxColor {
+  color: $weChat-color;
+}
+
 .gBtn {
   text-align: center;
   &.fixed {

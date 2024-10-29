@@ -4,15 +4,33 @@
   },
   "pages": [
     {
-      "path": "pages/example/page1",
+      "path": "pages/example/home",
       "style": {
-        "navigationBarTitleText": "页面1"
+        "navigationBarTitleText": "首页"
       }
     },
     {
-      "path": "pages/example/page2",
+      "path": "pages/example/demo",
       "style": {
-        "navigationBarTitleText": "页面2"
+        "navigationBarTitleText": "功能"
+      }
+    },
+    {
+      "path": "pages/example/private",
+      "style": {
+        "navigationBarTitleText": "私有页面 "
+      }
+    },
+    {
+      "path": "pages/html/index",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/passport/wechatMPLogin",
+      "style": {
+        "navigationBarTitleText": "微信授权"
       }
     }
   ],
@@ -30,12 +48,16 @@
     "borderStyle": "black",
     "list": [
       {
-        "pagePath": "pages/example/page1",
-        "text": "页面1"
+        "pagePath": "pages/example/home",
+        "iconPath": "static/icon/u215.png",
+        "selectedIconPath": "static/icon/u215.png",
+        "text": "首页"
       },
       {
-        "pagePath": "pages/example/page2",
-        "text": "页面2"
+        "pagePath": "pages/example/demo",
+        "iconPath": "static/icon/u215.png",
+        "selectedIconPath": "static/icon/u215.png",
+        "text": "功能"
       }
     ]
   }

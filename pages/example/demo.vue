@@ -3,6 +3,7 @@
     <u-button @click="getBlogList">获取博文列表</u-button>
     <u-button @click="getBlogDetails">获取博文详情</u-button>
     <u-button @click="createBlog">创建博文</u-button>
+    <u-button @click="toPrivate">私有路由</u-button>
     <pre>{{ JSON.stringify(httpData, null, 2) }}</pre>
   </div>
 </template>
@@ -17,9 +18,12 @@ export default {
     }
   },
   methods: {
+    toPrivate() {
+      this.toPage(`/pages/example/private`)
+    },
     async getBlogList() {
       this.httpData = await this.$u.api.getBlogList({ arg: `arg` })
-      this.list = this.httpData.data
+      this.list = this.httpData
     },
     async createBlog() {
       this.httpData = await this.$u.api.createBlog({

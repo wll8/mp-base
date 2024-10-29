@@ -1,50 +1,34 @@
 import Vue from 'vue'
 import App from './App'
 import uView from 'uview-ui'
+import '@/common/page.interceptor'
+import config from './common/config'
 Vue.use(uView)
-Vue.config.productionTip = false
 
 // 此处为演示vuex使用，非uView的功能部分
 import store from '@/store'
 
 // 引入uView提供的对vuex的简写法文件
 let vuexStore = require(`@/store/$u.mixin.js`)
-Vue.prototype.initUserInfo = function () {
-  // 初始化当前登录用户的信息
-  clearInterval(Vue.prototype.TIME_ER)
-  return new Promise((resove, reject) => {
-    this.$u.api
-      .getUserInformation()
-      .then((res) => {
-        console.log(`resresresres`, res)
-        this.$u.vuex(`vuex_user`, res)
-        if (!!res === false) {
-          return false
-        }
-        Vue.prototype.TIME_ER = setInterval(() => {
-          this.$u.api.getGlobalNotification().then((res) => {
-            res = {
-              ...this.vuex_getGlobalNotificationRes,
-              ...res,
-            }
-            this.$u.vuex(`vuex_getGlobalNotificationRes`, res)
-          })
-        }, 3e3)
-        console.log(`Vue.prototype.TIME_ER`, Vue.prototype.TIME_ER)
-        resove(res)
-      })
-      .catch((err) => {
-        uni.$u.toast(`初始化用户信息失败`)
-        // this.toPage(`/pages/my/register`, {pageType: `signIn`})
-        reject(err)
-      })
-  })
-}
 Vue.mixin(vuexStore)
 Vue.mixin({
   methods: {
+    viewHtml(cb) {
+      this.$u.vuex(`vuex_html`, {})
+      uni.navigateTo({
+        url: `/pages/html/index`,
+        success: async (res) => {
+          const data = await cb()
+          this.$u.vuex(`vuex_html`, data)
+        },
+      })
+    },
     toPage(url, data) {
       uni.$u.route(url, data)
+    },
+    logoutFn() {
+      this.$u.api.logout()
+      uni.redirectTo({ url: config.loginPage })
     },
   },
 })

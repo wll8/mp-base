@@ -1,3 +1,5 @@
+import config from './config'
+
 /**
  * 判断是否为空值
  * @param {*} value 要判断的值
@@ -23,8 +25,20 @@ function removeEmpty(obj) {
   })
 }
 
+function httpurl(path) {
+  const baseURL = config.staticUrl
+  const isFullUrl = /^(http:\/\/|https:\/\/)/i.test(path)
+  const isBase64 = /^data:image\/[a-zA-Z]+;base64,/i.test(path)
+
+  if (isFullUrl || isBase64) {
+    return path
+  }
+  return baseURL + path
+}
+
 const install = (Vue, vm) => {
   Vue.prototype.$tool = {
+    httpurl,
     isEmpty,
     removeEmpty,
     diffTime(startDate, endDate) {
